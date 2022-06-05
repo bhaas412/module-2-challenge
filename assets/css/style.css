@@ -1,15 +1,27 @@
+/* Universal selector */
+* {
+    font-family: monospace;
+}
 
-/* Block/section element selectors */
+/* Variables */
+
+:root {
+    --dark-color: #2c2c2c;
+    --light-color: #c7c7c7;
+}
+
+/* Element selectors */
+
 body {
-    background-color: #c7c7c7;
+    background-color: var(--light-color);
 }
 
 header {
     padding: 15px 20px 15px 20px;
-    background-color: #2c2c2c;
+    background-color: var(--dark-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.5rem;
-    color: #c7c7c7;
+    color: var(--light-color);
 }
 
 header nav {
@@ -18,8 +30,12 @@ header nav {
 }
 
 main {
-    color: #2c2c2c;
-    padding: 20px;
+    color: var(--dark-color);
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    justify-content: space-between;
 }
 
 nav ul li {
@@ -28,9 +44,12 @@ nav ul li {
     font-family: monospace;
 }
 
-/* Hyperlink selector */
+footer {
+    padding: 20px;
+}
+
 a {
-    color: #c7c7c7;
+    color: var(--light-color);
     text-decoration: none;
 }
 
@@ -41,28 +60,24 @@ a {
     justify-content: space-between;
 }
 
-.about-me-heading,
-.work-heading,
-.contact-heading,
-.about-me-p,
-.work-p,
-.contact-p {
-    font-size: 1.5rem;
+.flex-col {
+    flex-direction: column;
 }
 
-.about-me-p,
-.work-p,
-.contact-p {
-    padding: 20px;
+main section.flex-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 /* ID selectors */
+
 #avatar-img {
     height: 200px;
     width: 200px;
     border-radius: 50%;
     margin-left: 100px;
-    box-shadow: 0px 0px 10px #c7c7c7;
+    box-shadow: 0px 0px 10px var(--light-color);
 }
 
 #name-title {
@@ -80,6 +95,52 @@ a {
     padding: 20px;
 }
 
-#flex-col {
-    flex-direction: column;
+/* #work-projects {
+
+} */
+
+/* Media queries */
+
+/* Keep main content section layout normal for devices >= 769px */
+@media screen and (min-width: 769px) {
+    .main-heading {
+        font-size: 2rem;
+        padding: 20px;
+        min-width: 190px;
+        margin-right: 50px;
+        text-align: right;
+    }
+    
+    .main-p {
+        font-size: 1.5rem;
+        padding: 20px;
+        padding-left: 50px;
+        border-left-style: solid;
+        border-left-width: 2px;
+        max-width: 80%;
+    }
+}
+
+/* Make main content sections read vertically for devices <= 768px */
+@media screen and (max-width: 768px) {
+    main section.flex-container {
+        flex-direction: column;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+        padding: 20px;
+        min-width: 190px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .main-p {
+        font-size: 1.5rem;
+        padding: 20px;
+        padding-top: 50px;
+        border-top-style: solid;
+        border-top-width: 2px;
+        max-width: 80%;
+    }
 }
