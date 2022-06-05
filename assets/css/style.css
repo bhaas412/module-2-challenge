@@ -1,0 +1,85 @@
+
+/* Block/section element selectors */
+body {
+    background-color: #c7c7c7;
+}
+
+header {
+    padding: 15px 20px 15px 20px;
+    background-color: #2c2c2c;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: #c7c7c7;
+}
+
+header nav {
+    float: right;
+    padding-right: 20px;
+}
+
+main {
+    color: #2c2c2c;
+    padding: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+    font-family: monospace;
+}
+
+/* Hyperlink selector */
+a {
+    color: #c7c7c7;
+    text-decoration: none;
+}
+
+/* Class selectors */
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-me-heading,
+.work-heading,
+.contact-heading,
+.about-me-p,
+.work-p,
+.contact-p {
+    font-size: 1.5rem;
+}
+
+.about-me-p,
+.work-p,
+.contact-p {
+    padding: 20px;
+}
+
+/* ID selectors */
+#avatar-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 100px;
+    box-shadow: 0px 0px 10px #c7c7c7;
+}
+
+#name-title {
+    padding-left: 20px;
+    font-family: monospace;
+    font-size: 2rem;
+}
+
+#hero-img {
+    height: 300px;
+    width: 100%;
+    background-image: url("../images/bgimg.jpg");
+    background-size: cover;
+    background-position: 30% 30%;
+    padding: 20px;
+}
+
+#flex-col {
+    flex-direction: column;
+}
